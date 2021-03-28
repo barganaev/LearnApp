@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'home_student_subjects_screen.dart';
 // import 'package:imagebutton/imagebutton.dart';
 
 class HomeStudentScreen extends StatefulWidget {
@@ -15,661 +17,366 @@ class HomeStudentScreen extends StatefulWidget {
 }
 
 class _HomeStudentScreenState extends State<HomeStudentScreen> {
+  bool currentFaculty = false;
+
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ListView(
-        children: [
-          Container(
-            width: 300,
-            height: 220,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/agriculture.jpg'),
-                ),
-                Positioned(
-                  top: 0,
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Agriculture",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      TextButton(
-                        child: Text("AgricultureTitle"),
-                        onPressed: () {
-                          setState(() {
-                            //Opacity(opacity: this.isVisible ? 1.0 : 0.0, child: this.someChild);
-                          });
-                        },
-                      )
-                    ],
+    return Scaffold(
+      body: Center(
+        child: ListView(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/agriculture.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                )
-              ],
-            ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/architecture.jpg'),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Architecture",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Architecture",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/arts.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/architecture.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Arts",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Arts",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/business.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/arts.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Business",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Business",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/computer.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/business.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Computer",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Computer",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/education.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/computer.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Education",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Education",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/engineering.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/education.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Engineering",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Engineering",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/fitness.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/engineering.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Fitness",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Fitness",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/humanitites.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/fitness.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Humanities",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Humanities",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/law.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/humanitites.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Law",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Law",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/mba.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/law.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "MBA",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "MBA",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/media.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/mba.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Media",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Media",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/medicine.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/media.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Medicine",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Medicine",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/sciences.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/medicine.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Sciences",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Sciences",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Container(
-            width: 320,
-            height: 200,
-            child: Stack(
-              fit: StackFit.expand,
-              children: [
-                Image(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/travel.jpg'),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: GestureDetector(
+                  onTap: (){
+                    currentFaculty = true;
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => StudentSubjectsScreen()));
+                  },
+                  child: Card(
+                    semanticContainer: true,
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: Image.asset('assets/images/sciences.jpg', fit: BoxFit.fill,),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    elevation: 10,
+                  ),
                 ),
-                Positioned(
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  top: 0,
-                  child: Column(
-                    children: [
-                      Text(
-                        "Travel",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      Text(
-                        "Travel",
-                        style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+              ),
             ),
-          )
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset('assets/images/travel.jpg', fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
+                ),
+              ),
+            ),
 
-          /*Image.asset(
-            'assets/images/agriculture.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          TextButton(
-            child: Text("Agriculture"),
-            onPressed: () {},
-          ),
-          Image.asset(
-            'assets/images/architecture.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/arts.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/business.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/computer.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/education.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/engineering.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/fitness.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/humanitites.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/law.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/mba.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/media.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/medicine.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/sciences.jpg',
-            fit: BoxFit.cover,
-          ),
-          Divider(color: Colors.black, thickness: 3,),
-          Image.asset(
-            'assets/images/travel.jpg',
-            fit: BoxFit.cover,
-          ),*/
-        ],
+
+
+
+
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.red
+                ),
+                height: 200,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.blue
+                ),
+                height: MediaQuery.of(context).size.height * 0.3,
+              ),
+            )
+
+            /*Image.asset(
+              'assets/images/agriculture.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            TextButton(
+              child: Text("Agriculture"),
+              onPressed: () {},
+            ),
+            Image.asset(
+              'assets/images/architecture.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/arts.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/business.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/computer.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/education.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/engineering.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/fitness.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/humanitites.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/law.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/mba.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/media.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/medicine.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/sciences.jpg',
+              fit: BoxFit.cover,
+            ),
+            Divider(color: Colors.black, thickness: 3,),
+            Image.asset(
+              'assets/images/travel.jpg',
+              fit: BoxFit.cover,
+            ),*/
+          ],
+        ),
       ),
     );
   }
