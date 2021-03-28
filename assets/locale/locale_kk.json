@@ -1,0 +1,101 @@
+{
+  "main" : {
+    "title": "Вход",
+    "iin": "Ваш ИИН",
+    "iinError": "Введите ИИН",
+    "next": "Далее",
+    "forgotPassword": "Забыли пароль?"
+  },
+  "drawer": {
+    "main": "Басты бет",
+    "mainSubtext": "Соңғы жаңалықтар",
+    "account": "Аккаунт",
+    "accountSubtext": "Тіркелу немесе кіру",
+    "categories": "Санаттар",
+    "categoriesSubtext": "Барлық санаттарды көру",
+    "bookmarks": "Таңдаулылар",
+    "bookmarksSubtext": "Сіз таңдаған мақалалар",
+    "settings": "Баптаулар",
+    "settingsSubtext": "Қосымшаның баптаулары",
+    "about": "Байланыс",
+    "aboutSubtext": "Редакция мәліметтері",
+    "exit": "Шығу",
+    "profile": "Профайл",
+    "calendar": "Күнтізбе",
+    "calendarSubtext": "Оқиғалар күнтізбесі",
+    "exitSubtext": "Қосымшаны жабу"
+  },
+  "settings": {
+    "chooseLanguage": "Тілді таңдаңыз",
+    "notifications": "Хабарламалар",
+    "notificationSubscribe": "Жаңа жазбалар туралы хабарлама алу"
+  },
+  "article": {
+    "views": "Қаралым",
+    "commentTitle": "Пікірлер",
+    "leaveAComment": "Пікір қалдыру",
+    "sendTheComment": "Жіберу",
+    "loginToComment": "Пікір қалдыру үшін жүйеге кіру",
+    "moreNews": "Осы санаттың басқа да жаңалықтары",
+    "preComment" : "Құрметті оқырман, осы жазбаға қатысты ой-пікірлеріңіз болса осы жерде жазып қалдыруығызға болады. Алдын ала рахмет.",
+    "todayAt" : "Бүгін, "
+  },
+  "categories": {
+    "more": "Көрсету",
+    "viewAll": "Барлығын көрсету"
+  },
+  "tagAndSearch": {
+    "search": "Іздеу..."
+  },
+  "bookmark": {
+    "bookmarked": "Таңдаулыларға қосылды",
+    "deleted": "Таңдаулылардан өшірілді"
+  },
+  "auth": {
+    "loginTitle": "Кабинетке кіру",
+    "enterEmail": "E-mail көрсетіңіз",
+    "email": "E-mail",
+    "enterPassword": "Құпиясөзді көрсетіңіз",
+    "password": "Құпиясөз",
+    "forgotPassword": "Құпиясөзді ұмыттыңыз ба?",
+    "login": "Кіру",
+    "dontHaveAccount": "Аккаунтыңыз жоқ па?",
+    "signUp": "Тіркелу",
+    "verifyTitle": "Номерді құптау",
+    "enterCode": "Кодты енгізіңіз",
+    "verificationCode": "Верификация коды",
+    "submitVerification": "Жіберу",
+    "phoneNumber": "Телефон нөмірі",
+    "toMainPage": "Бастапқы бетке",
+    "exit": "Шығу",
+    "enterName": "Атыңызды енгізіңіз",
+    "name": "Атыңыз",
+    "enterSurname": "Фамилияңызды енгізіңіз",
+    "surname": "Фамилия",
+    "enterValidEmail": "Дұрыс e-mail енгізіңіз",
+    "enterPhoneNumber": "Телефон енгізіңіз",
+    "incorrectPassword": "Құпиясөз 8 символдан кем болмауы тиіс",
+    "reenterPassword": "Құпиясөз құптаңыз",
+    "passwordsDontMatch": "Құпиясөздер сәй кес емес",
+    "alreadyHaveAccount": "Аккаунтыңыз бар ма?",
+    "terms": "Қолдану келісімшарты",
+    "incorrectCode": "Код қате енгізіді!",
+    "verificationSuccess": "Сәтті аяқталды!",
+    "error": "Қателік анықталды!",
+    "errorAlreadyHaveAccount": "Көрсетілген аккаунт жүйеде бар!",
+    "codeSent": "Сіздің телефоныңызға смс-код көрсетілген хабарлама жолданды!",
+    "loginSuccess": "Сәтті өтті!",
+    "verifyAccount": "Аккаунтыңызды растаңыз!",
+    "loginError": "Қате  E-mail немесе Құпиясөз!"
+  },
+  "about": {
+    "contactInfo": "Редакция",
+    "socialLinks": "Әлеуметтік желілерде"
+  },
+  "profile" : {
+    "requests": "Ұсынылды",
+    "events": "Жіберді",
+    "exit": "Шығу"
+  },
+  "error": "Қате!"
+}
