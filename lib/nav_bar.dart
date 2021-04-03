@@ -13,7 +13,7 @@ class NavBar extends StatefulWidget {
 
 class _NavBarState extends State<NavBar> {
   int _currentIndex = 0;
-  String _title = "Күнтізбе";
+  String _title = "Главная";
 
   final List<Widget> _children = [
     HomeScreen(),

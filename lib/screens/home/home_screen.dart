@@ -1,4 +1,4 @@
-import 'package:diplom_app/screens/home/home_student_screen.dart';
+import 'file:///D:/4%20course%202%20semestr/DiplomProject/diplom_app/lib/screens/home/student/home_student_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
