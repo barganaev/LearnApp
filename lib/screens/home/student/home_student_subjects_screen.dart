@@ -1,3 +1,4 @@
+import 'package:diplom_app/screens/home/learning_screen.dart';
 import 'package:flutter/material.dart';
 
 class StudentSubjectsScreen extends StatefulWidget {
@@ -24,23 +25,28 @@ class _StudentSubjectsScreenState extends State<StudentSubjectsScreen> {
         padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.02),
         child: ListView(
           children: [
-            Container(
-              child: Card(
-                child: ListTile(
-                  leading: Container(
-                    width: MediaQuery.of(context).size.width * 0.1,
-                    //color: Colors.red,
-                    child: Row(
-                      children: [
-                        Icon(Icons.autorenew),
-                        VerticalDivider(thickness: 1, indent: MediaQuery.of(context).size.height * 0.01, endIndent: MediaQuery.of(context).size.height * 0.01,)
-                      ],
+            InkWell(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LearningScreen()));
+              },
+              child: Container(
+                child: Card(
+                  child: ListTile(
+                    leading: Container(
+                      width: MediaQuery.of(context).size.width * 0.1,
+                      //color: Colors.red,
+                      child: Row(
+                        children: [
+                          Icon(Icons.autorenew),
+                          VerticalDivider(thickness: 1, indent: MediaQuery.of(context).size.height * 0.01, endIndent: MediaQuery.of(context).size.height * 0.01,)
+                        ],
+                      ),
                     ),
-                  ),
-                  title: Text('Introduction to Driving'),
-                  subtitle: Text('Intermediate'),
-                  trailing: Icon(Icons.arrow_forward_ios),
-                )
+                    title: Text('Introduction to Driving'),
+                    subtitle: Text('Intermediate'),
+                    trailing: Icon(Icons.arrow_forward_ios),
+                  )
+                ),
               ),
             ),
             Container(
