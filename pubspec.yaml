@@ -29,6 +29,11 @@ dependencies:
 #  firebase_auth_web: ^1.0.7
   http_parser: ^4.0.0
 
+  toast: ^0.1.3
+  modal_progress_hud: ^0.1.3
+  flutter_staggered_grid_view:
+  youtube_player_flutter: ^8.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

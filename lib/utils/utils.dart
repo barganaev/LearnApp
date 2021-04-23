@@ -44,6 +44,14 @@ String jsonFaculties = '''
             "linearalgebra": "Линейная Алгебра",
             "programmingprinciples1": "Программирование на Python"
         }
+    },
+    "science": {
+        "name": "Наука",
+        "disciplines": {
+            "scienceaboutsomething": "Наука о чем-то",
+            "scienceaboutsomeone": "Наука о ком-то",
+            "scienceaboutscience": "Наука о науке"
+        }
     }
   }
 ''';

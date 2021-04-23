@@ -2,7 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:diplom_app/screens/auth/signup_screen.dart';
 import 'package:diplom_app/screens/calendar/calendar_screen.dart';
 import 'package:diplom_app/screens/home/home_screen.dart';
-import 'package:diplom_app/screens/search/search_screen.dart';
+import 'file:///D:/4%20course%202%20semestr/DiplomProject/diplom_app/lib/screens/search/photo/search_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +55,7 @@ class _NavBarState extends State<NavBar> {
       /*child:*/return WillPopScope(
         onWillPop: () async => false,
         child: Scaffold(
-          appBar: AppBar(centerTitle: true, title: Center(child: Text('$_title')), backgroundColor: Color.fromRGBO(34, 149, 193, 1),),
+          appBar: AppBar(centerTitle: true, title: Text('$_title'), backgroundColor: Color.fromRGBO(34, 149, 193, 1),),
           bottomNavigationBar: CurvedNavigationBar(
             key: _bottomNavigationKey,
             index: 0,

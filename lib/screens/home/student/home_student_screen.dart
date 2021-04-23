@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'home_student_subjects_screen.dart';
 // import 'package:imagebutton/imagebutton.dart';
@@ -6,24 +9,47 @@ import 'home_student_subjects_screen.dart';
 class HomeStudentScreen extends StatefulWidget {
   @override
   _HomeStudentScreenState createState() => _HomeStudentScreenState();
-
-  final Widget someChild;
-  final bool isVisible;
-  HomeStudentScreen({this.someChild, this.isVisible});
-
-  void _showList() {}
-
-  void _onImageTapped() {}
 }
 
 class _HomeStudentScreenState extends State<HomeStudentScreen> {
+  // List _faculties = [];
+
+  // Future<void> facultyJson() async {
+  //   final String response = await rootBundle.loadString('assets/faculty/faculty.json');
+  //   final data = await json.decode(response);
+  //   setState(() {
+  //     _faculties = data["faculties"];
+  //   });
+  // }
+
   bool currentFaculty = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: ListView(
+        child:
+        /*ListView.builder(
+          itemBuilder: (BuildContext context, int index){
+            return Padding(
+              padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
+              child: Container(
+                // color: Colors.red,
+                height: MediaQuery.of(context).size.height * 0.3,
+                child: Card(
+                  semanticContainer: true,
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  child: Image.asset(_faculties[index]., fit: BoxFit.fill,),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  elevation: 10,
+                ),
+              ),
+            );
+          }
+        )*/
+        ListView(
           children: [
             Padding(
               padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),

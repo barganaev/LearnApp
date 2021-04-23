@@ -1,0 +1,26 @@
+{
+  "FIT": {
+    "name": "Факультет Информационных Технологии (ФИТ)",
+    "disciplines": {
+      "database": "База Данных",
+      "algorithms": "Алгоритмы и структуры данных",
+      "programmingprinciples1": "Принцип Программирования 1"
+    }
+  },
+  "MCM": {
+    "name": "Математическое и компьютерное моделирование (МКМ)",
+    "disciplines": {
+      "discretemath": "Дискритная Математика",
+      "linearalgebra": "Линейная Алгебра",
+      "programmingprinciples1": "Программирование на Python"
+    }
+  },
+  "science": {
+    "name": "Наука",
+    "disciplines": {
+      "scienceaboutsomething": "Наука о чем-то",
+      "scienceaboutsomeone": "Наука о ком-то",
+      "scienceaboutscience": "Наука о науке"
+    }
+  }
+}
