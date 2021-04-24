@@ -1,7 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:diplom_app/screens/auth/signup_screen.dart';
-import 'package:diplom_app/screens/calendar/calendar_screen.dart';
+import 'package:diplom_app/screens/calendar/alarm_screen/alarm_screen.dart';
+import 'file:///D:/4%20course%202%20semestr/DiplomProject/diplom_app/lib/screens/calendar/calendar_screen/calendar_screen.dart';
 import 'package:diplom_app/screens/home/home_screen.dart';
+import 'package:diplom_app/screens/saved/saved_screen.dart';
 import 'file:///D:/4%20course%202%20semestr/DiplomProject/diplom_app/lib/screens/search/photo/search_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -25,7 +27,7 @@ class _NavBarState extends State<NavBar> {
   final List<Widget> _children = [
     HomeScreen(),
     SearchScreen(),
-    Text('First'),
+    ChatsPage(),
     CalendarScreen(),
     Text('First')
   ];
@@ -206,8 +208,46 @@ class _NavigateDrawerState extends State<NavigateDrawer> {
               });
             },
           ),
+          ListTile(
+            leading: new IconButton(
+              icon: new Icon(Icons.alarm, color: Colors.black),
+              onPressed: (){
+                Navigator.of(context).push(_createRoute());
+                //Navigator.push(context, MaterialPageRoute(builder: (context) => AlarmScreen()));
+              },
+            ),
+            title: Text('Alarm clock'),
+            onTap: () {
+              //print(widget.uid);
+              Navigator.of(context).push(_createRoute());
+            },
+          ),
+          ListTile(
+            leading: new IconButton(
+              icon: new Icon(Icons.settings, color: Colors.black),
+              onPressed: () => null,
+            ),
+            title: Text('Settings'),
+            onTap: () {
+              //print(widget.uid);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => NavBar(uid: widget.uid)),
+              );
+            },
+          ),
         ],
       ),
     );
   }
+}
+
+
+Route _createRoute() {
+  return PageRouteBuilder(
+    pageBuilder: (context, animation, secondaryAnimation) => AlarmScreen(),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      return child;
+    },
+  );
 }
