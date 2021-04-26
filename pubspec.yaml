@@ -36,6 +36,8 @@ dependencies:
   youtube_player_flutter: ^8.0.0
   flutter_svg: ^0.22.0
   provider: ^5.0.0
+  rflutter_alert: ^2.0.2
+  flutter_colorpicker: ^0.4.0
 
 dev_dependencies:
   flutter_test:
