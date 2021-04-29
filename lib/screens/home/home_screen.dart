@@ -1,3 +1,4 @@
+import 'package:diplom_app/screens/home/math/home_math_screen.dart';
 import 'package:diplom_app/screens/home/paint/draw_screen.dart';
 import 'package:diplom_app/screens/home/quizlet/home_quizlet_screen.dart';
 import 'package:flutter/material.dart';
@@ -58,17 +59,22 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height * 0.05, horizontal: MediaQuery.of(context).size.width * 0.1),
-              child: Container(
-                // color: Colors.red,
-                height: MediaQuery.of(context).size.height * 0.3,
-                child: Card(
-                  semanticContainer: true,
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  child: Image.asset('assets/images/arts.jpg', fit: BoxFit.fill,),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+              child: InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomeMathScreen()));
+                },
+                child: Container(
+                  // color: Colors.red,
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  child: Card(
+                    semanticContainer: true,
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: Image.asset('assets/home_math.jpg', fit: BoxFit.fill,),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    elevation: 10,
                   ),
-                  elevation: 10,
                 ),
               ),
             ),
