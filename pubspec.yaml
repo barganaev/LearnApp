@@ -39,6 +39,8 @@ dependencies:
   rflutter_alert: ^2.0.2
   flutter_colorpicker: ^0.4.0
 #  flutter_youtube: ^2.0.0+1
+  flutter_swiper: ^1.1.6
+  google_fonts: ^2.0.0
 
 dev_dependencies:
   flutter_test:

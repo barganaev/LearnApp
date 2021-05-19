@@ -102,7 +102,7 @@ class _NavBarState extends State<NavBar> {
                 } else if (index == 1) {
                   _title = "Search";
                 } else if (index == 2) {
-                  _title = "Saved";
+                  _title = "Messenger";
                 } else if (index == 3) {
                   _title = "Calendar";
                 }else{

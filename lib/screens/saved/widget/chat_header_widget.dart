@@ -20,7 +20,7 @@ class ChatHeaderWidget extends StatelessWidget {
         Container(
           width: MediaQuery.of(context).size.width * 0.75,
           child: Text(
-            'ChatsApp',
+            'Chats',
             style: TextStyle(
               color: Colors.white,
               fontSize: 30,

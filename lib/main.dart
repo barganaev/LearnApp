@@ -38,7 +38,7 @@ class IntroScreen extends StatelessWidget {
         navigateAfterSeconds: result != null ? NavBar(uid: result.uid) : SignUp(),
         seconds: 5,
         title: new Text(
-          'Welcome To Meet up!',
+          'Welcome To Educational App!',
           style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
         ),
         image: Image.asset('assets/dart.png', fit: BoxFit.scaleDown),  // TODO: Add new image for here!
