@@ -9,7 +9,7 @@ class ChatsPage extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
     backgroundColor: Colors.blue,
     body: SafeArea(
-      child: StreamBuilder<List<User>>(
+      child: StreamBuilder<List<Userr>>(
         stream: FirebaseApi.getUsers(),
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {

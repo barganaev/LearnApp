@@ -6,11 +6,11 @@ import 'package:diplom_app/screens/saved/model/user.dart';
 import '../utils.dart';
 
 class FirebaseApi {
-  static Stream<List<User>> getUsers() => FirebaseFirestore.instance
+  static Stream<List<Userr>> getUsers() => FirebaseFirestore.instance
       .collection('users')
       .orderBy(UserField.lastMessageTime, descending: true)
       .snapshots()
-      .transform(Utils.transformer(User.fromJson));
+      .transform(Utils.transformer(Userr.fromJson));
 
   static Future uploadMessage(String idUser, String message) async {
     final refMessages =
@@ -38,7 +38,7 @@ class FirebaseApi {
           .snapshots()
           .transform(Utils.transformer(Message.fromJson));
 
-  static Future addRandomUsers(List<User> users) async {
+  static Future addRandomUsers(List<Userr> users) async {
     final refUsers = FirebaseFirestore.instance.collection('users');
 
     final allUsers = await refUsers.get();

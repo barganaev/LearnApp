@@ -5,7 +5,7 @@ import 'package:diplom_app/screens/saved/widget/profile_header_widget.dart';
 import 'package:flutter/material.dart';
 
 class ChatScreen extends StatefulWidget {
-  final User user;
+  final Userr user;
 
   const ChatScreen({
     @required this.user,

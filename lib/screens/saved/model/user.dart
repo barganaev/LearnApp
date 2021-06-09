@@ -6,33 +6,33 @@ class UserField {
   static final String lastMessageTime = 'lastMessageTime';
 }
 
-class User {
+class Userr {
   final String idUser;
   final String name;
   final String urlAvatar;
   final DateTime lastMessageTime;
 
-  const User({
+  const Userr({
     this.idUser,
     @required this.name,
     @required this.urlAvatar,
     @required this.lastMessageTime,
   });
 
-  User copyWith({
+  Userr copyWith({
     String idUser,
     String name,
     String urlAvatar,
     String lastMessageTime,
   }) =>
-      User(
+      Userr(
         idUser: idUser ?? this.idUser,
         name: name ?? this.name,
         urlAvatar: urlAvatar ?? this.urlAvatar,
         lastMessageTime: lastMessageTime ?? this.lastMessageTime,
       );
 
-  static User fromJson(Map<String, dynamic> json) => User(
+  static Userr fromJson(Map<String, dynamic> json) => Userr(
     idUser: json['idUser'],
     name: json['name'],
     urlAvatar: json['urlAvatar'],

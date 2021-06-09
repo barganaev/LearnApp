@@ -1,3 +1,5 @@
+// @dart=2.9
+
 import 'package:diplom_app/nav_bar.dart';
 import 'package:diplom_app/screens/auth/signup_screen.dart';
 import 'package:diplom_app/screens/calendar/calendar_screen/model/task_data.dart';
@@ -41,7 +43,7 @@ class IntroScreen extends StatelessWidget {
           'Welcome To Educational App!',
           style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
         ),
-        image: Image.asset('assets/dart.png', fit: BoxFit.scaleDown),  // TODO: Add new image for here!
+        image: Image.asset('assets/intro.jpg', fit: BoxFit.scaleDown),  // TODO: Add new image for here!
         backgroundColor: Colors.white,
         styleTextUnderTheLoader: new TextStyle(),
         photoSize: 100.0,

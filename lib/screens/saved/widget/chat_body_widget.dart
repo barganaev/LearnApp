@@ -3,7 +3,7 @@ import 'package:diplom_app/screens/saved/screen/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 class ChatBodyWidget extends StatelessWidget {
-  final List<User> users;
+  final List<Userr> users;
 
   const ChatBodyWidget({
     @required this.users,

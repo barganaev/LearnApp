@@ -3,6 +3,8 @@ import 'package:diplom_app/screens/auth/signup_screen.dart';
 import 'package:diplom_app/screens/calendar/alarm_screen/alarm_screen.dart';
 import 'file:///D:/4%20course%202%20semestr/DiplomProject/diplom_app/lib/screens/calendar/calendar_screen/calendar_screen.dart';
 import 'package:diplom_app/screens/home/home_screen.dart';
+import 'package:diplom_app/screens/more/more_screen.dart';
+import 'package:diplom_app/screens/saved/model/user.dart';
 import 'package:diplom_app/screens/saved/saved_screen.dart';
 import 'file:///D:/4%20course%202%20semestr/DiplomProject/diplom_app/lib/screens/search/photo/search_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -29,7 +31,8 @@ class _NavBarState extends State<NavBar> {
     SearchScreen(),
     ChatsPage(),
     CalendarScreen(),
-    Text('First')
+    MoreScreen()
+    //MoreScreen(uid: widget.uid,)
   ];
 
   GlobalKey _bottomNavigationKey = GlobalKey();
@@ -47,6 +50,7 @@ class _NavBarState extends State<NavBar> {
 
   @override
   Widget build(BuildContext context) {
+    User result = FirebaseAuth.instance.currentUser;
     Future<void> _signOut() async {
       try {
         await FirebaseAuth.instance.signOut();
@@ -57,7 +61,21 @@ class _NavBarState extends State<NavBar> {
       /*child:*/return WillPopScope(
         onWillPop: () async => false,
         child: Scaffold(
-          appBar: AppBar(centerTitle: true, title: Text('$_title'), backgroundColor: Color.fromRGBO(34, 149, 193, 1),),
+          appBar: AppBar(
+            centerTitle: true,
+            title: Text('$_title'),
+            backgroundColor: Color.fromRGBO(34, 149, 193, 1),
+            actions: [
+              Padding(
+                padding: EdgeInsets.only(right: MediaQuery.of(context).size.width * 0.02),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MoreScreen(uid: result.uid,)));
+                  },
+                  child: Icon(Icons.account_box)),
+              )
+            ],
+          ),
           bottomNavigationBar: CurvedNavigationBar(
             key: _bottomNavigationKey,
             index: 0,
@@ -84,7 +102,8 @@ class _NavBarState extends State<NavBar> {
                 color: Colors.white,
               ),
               Icon(
-                Icons.more_horiz_rounded, // or Icons.perm_identity
+                Icons.account_box,
+                // Icons.more_horiz_rounded,
                 size: 20,
                 color: Colors.white,
               ),
